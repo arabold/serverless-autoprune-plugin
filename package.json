@@ -1,0 +1,34 @@
+{
+  "name": "serverless-autoprune-plugin",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=4.0"
+  },
+  "description": "Serverless Auto-Prune Plugin - Delete old AWS Lambda versions",
+  "author": "arabold",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arabold/serverless-autoprune-plugin"
+  },
+  "keywords": [
+    "serverless plugin sentry",
+    "serverless framework plugin",
+    "serverless applications",
+    "serverless plugins",
+    "api gateway",
+    "lambda",
+    "aws",
+    "aws lambda",
+    "amazon",
+    "amazon web services",
+    "serverless.com"
+  ],
+  "main": "index.js",
+  "bin": {},
+  "devDependencies": {},
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "lodash": "^4.11.2"
+  }
+}
