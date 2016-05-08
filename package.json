@@ -1,6 +1,6 @@
 {
   "name": "serverless-autoprune-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "node": ">=4.0"
   },
@@ -28,6 +28,7 @@
   "bin": {},
   "devDependencies": {},
   "dependencies": {
+    "aws-sdk": "^2.3.9",
     "bluebird": "^3.3.5",
     "lodash": "^4.11.2"
   }

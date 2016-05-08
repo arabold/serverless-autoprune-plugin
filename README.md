@@ -56,6 +56,12 @@ functions in the current directory tree, or specify `-a` or `--all` to prune all
 
 ## Releases
 
+### 0.1.2
+* Added `aws-sdk` as dependency in case it's not installed globally
+
+### 0.1.1
+* Small bugfix
+
 ### 0.1.0
 * Initial release
 
