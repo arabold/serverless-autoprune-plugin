@@ -56,6 +56,10 @@ functions in the current directory tree, or specify `-a` or `--all` to prune all
 
 ## Releases
 
+### 0.1.3
+* Support pruning only a specific stage (in case Lambda function names differ per stage)
+* Use Serverless credentials depending on stage and region specified.
+
 ### 0.1.2
 * Added `aws-sdk` as dependency in case it's not installed globally
 
