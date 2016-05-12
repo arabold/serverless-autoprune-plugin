@@ -8,7 +8,7 @@ This Serverless 0.5.x plugin deletes old AWS Lambda versions.
 ## Overview
 The plugin lets you delete old AWS Lambda versions from your account.
 
-`serverless-autoprune-plugin` heavily inspired by Nopik's 
+`serverless-autoprune-plugin` is heavily inspired by Nopik's 
 [serverless-lambda-prune-plugin](https://github.com/Nopik/serverless-lambda-prune-plugin)
 but adds some much needed functionality such as limiting pruning to a specific region, project and function.
 It is fully compatible with Serverless 0.5.5 and higher.
@@ -49,6 +49,8 @@ functions in the current directory tree, or specify `-a` or `--all` to prune all
 
 ### Options
 
+* `-s|--stage <stage>`: prune only a specific stage (only applicable if your Lambda
+  functions use different names per stage)
 * `-r|--region <region>`: prune only a specific region (defaults to all regions).
 * `-n|--number <number>`: keep last N versions (defaults to 3).
 * `-a|--all`: prune all functions of the current project.
@@ -71,3 +73,4 @@ functions in the current directory tree, or specify `-a` or `--all` to prune all
 
 ### To Dos
 * Optionally prune during `function deploy`
+* Pruning of API Gateway Deploments (https://github.com/Nopik/serverless-lambda-prune-plugin/pull/6)
