@@ -39,16 +39,33 @@ It is fully compatible with Serverless 0.5.5 and higher.
 
 ## Usage
 
-This plugin adds a new function command `prune`:
+### Function Deploy
+
+This plugin hooks into the Serverless `function deploy` command action and 
+extends it with two additional options:
+
+* `-p|--prune`: Delete previous Lambda versions after deployment.
+* `-n|--number <number>`: keep last N versions (defaults to 3).
+
+A simple example to deploy and prune all functions in your project:
 ```
-serverless function prune [ function-name [...] ]
+serverless function deploy --all --prune
+```
+
+
+### Function Prune
+
+If you only want to delete old versions without deploying a new one, use the new `prune`
+command action:
+```
+serverless function prune [OPTION]... [FUNCTION]...
 ```
 
 You can specify one or multiple function names to prune, omit any function names to prune the
-functions in the current directory tree, or specify `-a` or `--all` to prune all functions of the project.
+functions in the current directory tree, or specify the `-a` or `--all` option to prune all
+functions of the project.
 
-### Options
-
+Available options are:
 * `-s|--stage <stage>`: prune only a specific stage (only applicable if your Lambda
   functions use different names per stage)
 * `-r|--region <region>`: prune only a specific region (defaults to all regions).
@@ -57,6 +74,11 @@ functions in the current directory tree, or specify `-a` or `--all` to prune all
 
 
 ## Releases
+
+### 0.2.0
+* Finally the plugin deserves it's name: Auto-Pruning! Passin in `--prune` to your 
+  `serverless function deploy` will automatically delete previous Lambda versions.
+* Handle AWS Rate Limit responses using a temporary fix until Serverless 0.5.6 is released
 
 ### 0.1.3
 * Support pruning only a specific stage (in case Lambda function names differ per stage)
