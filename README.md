@@ -76,7 +76,7 @@ Available options are:
 ## Releases
 
 ### 0.2.0
-* Finally the plugin deserves it's name: Auto-Pruning! Passin in `--prune` to your 
+* Finally the plugin deserves it's name: Auto-Pruning! Passing `--prune` to your 
   `serverless function deploy` will automatically delete previous Lambda versions.
 * Handle AWS Rate Limit responses using a temporary fix until Serverless 0.5.6 is released
 
@@ -94,5 +94,4 @@ Available options are:
 * Initial release
 
 ### To Dos
-* Optionally prune during `function deploy`
-* Pruning of API Gateway Deploments (https://github.com/Nopik/serverless-lambda-prune-plugin/pull/6)
+* Pruning of API Gateway Deployments (https://github.com/Nopik/serverless-lambda-prune-plugin/pull/6)
