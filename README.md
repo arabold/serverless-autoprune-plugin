@@ -75,6 +75,10 @@ Available options are:
 
 ## Releases
 
+### 0.2.1
+* You can run the plugin without specifying a target region now. It will automatically prune
+  your Lambda functions in all deployed regions.
+
 ### 0.2.0
 * Finally the plugin deserves it's name: Auto-Pruning! Passing `--prune` to your 
   `serverless function deploy` will automatically delete previous Lambda versions.
